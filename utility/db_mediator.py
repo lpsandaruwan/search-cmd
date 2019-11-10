@@ -1,5 +1,9 @@
 from tinydb import TinyDB, Query
 
+"""
+Contains singleton instance for TinyDB connection
+"""
+
 
 class DBMediator(object):
     __instance = None

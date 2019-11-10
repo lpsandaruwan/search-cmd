@@ -1,3 +1,7 @@
+"""
+Contains configurations for searchable models
+"""
+
 MODELS = [
     {
         "model": "user",

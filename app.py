@@ -6,6 +6,7 @@ from utility import search_records
 from utility import validate_field_and_get_field_type
 from utility import validate_model_index_and_get_model
 
+# Set logging level to logging.DEBUG for debug logs
 logging.basicConfig()
 logging.root.setLevel(logging.INFO)
 

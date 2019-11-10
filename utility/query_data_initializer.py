@@ -8,6 +8,10 @@ from utility.db_mediator import db_mediator_instance
 
 
 def initialize_query_data():
+    """
+    Initializes TinyDB document data store files for the given base models using given JSON files.
+    :return: None
+    """
     logging.debug("Please wait while creating database for querying...")
     for model in MODELS:
         logging.debug("Started indexing %s data for querying" % model['model'])
