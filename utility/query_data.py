@@ -6,7 +6,11 @@ Model = db_mediator_instance.Model
 def search_records(field, field_type, value, db_file):
     db = db_mediator_instance.get_db(db_file)
     if field_type == 'int':
-        return db.search(Model[field] == int(value))
+        try:
+            value = int(value)
+        except(ValueError, Exception):
+            pass
+        return db.search(Model[field] == value)
     elif field_type == 'string':
         return db.search(Model[field] == value)
     elif field_type == 'list':

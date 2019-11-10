@@ -36,8 +36,14 @@ def print_fields():
 
 
 def print_results_pretty(model, results):
-
-    print('\n')
+    if len(results) == 0:
+        print('No records found!\n')
+    else:
+        print('\n')
+        for result in results:
+            for field in model['printable_fields']:
+                print('{:<25} {}'.format(field, str(result[field])))
+        print('\n')
 
 
 def print_quit_message():
